@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		123FD7A82F6FA1E6EC7CA045 /* Pods_XQShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4E55BDDB59A55F1B84788D /* Pods_XQShop.framework */; };
+		CB8FAFCD1CA27FBC00C32F5C /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFCC1CA27FBC00C32F5C /* ADViewController.swift */; };
+		CB8FAFCF1CA27FDE00C32F5C /* MainAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFCE1CA27FDE00C32F5C /* MainAD.swift */; };
+		CB8FAFD11CA287EB00C32F5C /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFD01CA287EB00C32F5C /* SwiftDictModel.swift */; };
 		CB9FC3C91CA1688800228F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9FC3C81CA1688800228F90 /* AppDelegate.swift */; };
 		CB9FC3CB1CA1688800228F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9FC3CA1CA1688800228F90 /* ViewController.swift */; };
 		CB9FC3CE1CA1688800228F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9FC3CC1CA1688800228F90 /* Main.storyboard */; };
@@ -119,6 +122,9 @@
 		23023739E761AD5A5BE7B998 /* Pods-XQShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XQShop/Pods-XQShop.debug.xcconfig"; sourceTree = "<group>"; };
 		9F4E55BDDB59A55F1B84788D /* Pods_XQShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XQShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B014915DCC2CCA6C37F30B03 /* Pods-XQShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQShop/Pods-XQShop.release.xcconfig"; sourceTree = "<group>"; };
+		CB8FAFCC1CA27FBC00C32F5C /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		CB8FAFCE1CA27FDE00C32F5C /* MainAD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAD.swift; sourceTree = "<group>"; };
+		CB8FAFD01CA287EB00C32F5C /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
 		CB9FC3C51CA1688800228F90 /* XQShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XQShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9FC3C81CA1688800228F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB9FC3CA1CA1688800228F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +341,15 @@
 				CB9FC5141CA181D200228F90 /* GuideViewController.swift */,
 			);
 			name = Guide;
+			sourceTree = "<group>";
+		};
+		CB8FAFCB1CA27FBC00C32F5C /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				CB8FAFCC1CA27FBC00C32F5C /* ADViewController.swift */,
+				CB8FAFCE1CA27FDE00C32F5C /* MainAD.swift */,
+			);
+			path = AD;
 			sourceTree = "<group>";
 		};
 		CB9FC3BC1CA1688800228F90 = {
@@ -666,6 +681,7 @@
 		CB9FC4181CA1734800228F90 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CB8FAFCB1CA27FBC00C32F5C /* AD */,
 				CB8FAFC81CA2451400C32F5C /* Guide */,
 				CB9FC4191CA1734800228F90 /* Login */,
 				CB9FC41A1CA1734800228F90 /* Navigation */,
@@ -704,6 +720,7 @@
 			children = (
 				CB9FC5101CA17A2E00228F90 /* UpImageDownTextButton.swift */,
 				CB9FC5121CA1802900228F90 /* BaseViewController.swift */,
+				CB8FAFD01CA287EB00C32F5C /* SwiftDictModel.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1196,6 +1213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9FC4861CA1738A00228F90 /* SDWebImageDecoder.m in Sources */,
+				CB8FAFCD1CA27FBC00C32F5C /* ADViewController.swift in Sources */,
 				CB9FC5111CA17A2E00228F90 /* UpImageDownTextButton.swift in Sources */,
 				CB9FC3CB1CA1688800228F90 /* ViewController.swift in Sources */,
 				CB9FC4821CA1738A00228F90 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1227,8 +1245,10 @@
 				CB9FC4881CA1738A00228F90 /* SDWebImageDownloaderOperation.m in Sources */,
 				CB9FC4591CA1737F00228F90 /* MJRefreshNormalHeader.m in Sources */,
 				CB9FC4541CA1737F00228F90 /* MJRefreshAutoStateFooter.m in Sources */,
+				CB8FAFCF1CA27FDE00C32F5C /* MainAD.swift in Sources */,
 				CB9FC48A1CA1738A00228F90 /* SDWebImagePrefetcher.m in Sources */,
 				CB9FC48E1CA1738A00228F90 /* UIImage+WebP.m in Sources */,
+				CB8FAFD11CA287EB00C32F5C /* SwiftDictModel.swift in Sources */,
 				CB9FC4891CA1738A00228F90 /* SDWebImageManager.m in Sources */,
 				CB9FC4831CA1738A00228F90 /* NSData+ImageContentType.m in Sources */,
 				CB9FC5091CA1772400228F90 /* Color+Extension.swift in Sources */,
@@ -1410,6 +1430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuqian.XQShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "XQShop/XQShop-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -1434,6 +1455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuqian.XQShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "XQShop/XQShop-Bridging-Header.h";
 			};
 			name = Release;
 		};

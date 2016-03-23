@@ -13,12 +13,16 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-//    var adViewController: 
+    var adViewController: ADViewController? 
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        NSThread.sleepForTimeInterval(1.0)
+        
+        setUM()
         setAppSubject()
+        addNotification()
         initWindow()
         //
         return true
@@ -49,10 +53,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 //    MARK: - private Method
+    private func setUM() {
+        
+    }
     private func setAppSubject() {
         print("设置app主题")
+        let tabBarApperance = UITabBar.appearance()
+        tabBarApperance.backgroundColor = UIColor.whiteColor()
+        tabBarApperance.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.translucent = false
     }
     
+    private func addNotification() {
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMainTabbarControllerSucess:", name: ADImageLoadSecussed, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMainTabbarControllerFale", name: ADImageLoadFail, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "shoMainTabBarController", name: GuideViewControllerDidFinish, object: nil)
+
+    }
     private func initWindow() {
         /*初始化window*/
         window = UIWindow(frame: ScreenBounds)
@@ -71,15 +90,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         //为nil说明是第一次启动，不等于说明是更新
-//        if appVersion == nil || appVersion != currentAppVersion {
+        if appVersion == nil || appVersion != currentAppVersion {
             //保存最新的版本号
-//            userDefaults.setValue(currentAppVersion, forKey: "appVersion")
-//            print("第一次启动或者更新")
+            userDefaults.setValue(currentAppVersion, forKey: "appVersion")
+            print("第一次启动或者更新")
 //            let guideViewController = soryboard.instantiateViewControllerWithIdentifier
             window?.rootViewController = GuideViewController()
-//        } else {
-//             print("不是第一次启动")
-//        }
+        } else {
+             print("不是第一次启动")
+            addADRootViewController()
+        }
+        
+    }
+    
+    private func addADRootViewController() {
+        adViewController = ADViewController()
+        
+        weak var tmpSelf = self
+        
+        MainAD.loadADData {
+            (data, eror) -> Void in
+            if data?.data?.img_name != nil {
+                tmpSelf!.adViewController!.imageName = data!.data!.img_name
+                tmpSelf!.window?.rootViewController = self.adViewController
+            }
+        }
         
     }
 //    MARK: - public Method
