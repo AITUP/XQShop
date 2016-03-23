@@ -13,10 +13,14 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+//    var adViewController: 
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        setAppSubject()
+        initWindow()
+        //
         return true
     }
 
@@ -43,6 +47,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+//    MARK: - private Method
+    private func setAppSubject() {
+        print("设置app主题")
+    }
+    
+    private func initWindow() {
+        /*初始化window*/
+        window = UIWindow(frame: ScreenBounds)
+        /** 显示当前window*/
+        window?.makeKeyAndVisible()
+        //得到当前应用的版本号
+        let infoDictionary = NSBundle.mainBundle().infoDictionary
+        let currentAppVersion = infoDictionary!["CFBundleShortVersionString"] as! String
+        print("当前版本号\(currentAppVersion)")
+        //取出之前保存的版本号
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let appVersion = userDefaults.stringForKey("appVersion")
+        print("保存的版本号\(appVersion)")
+        
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //为nil说明是第一次启动，不等于说明是更新
+//        if appVersion == nil || appVersion != currentAppVersion {
+            //保存最新的版本号
+//            userDefaults.setValue(currentAppVersion, forKey: "appVersion")
+//            print("第一次启动或者更新")
+//            let guideViewController = soryboard.instantiateViewControllerWithIdentifier
+            window?.rootViewController = GuideViewController()
+//        } else {
+//             print("不是第一次启动")
+//        }
+        
+    }
+//    MARK: - public Method
+//    MARK: - Action
+    
 
     // MARK: - Core Data stack
 
