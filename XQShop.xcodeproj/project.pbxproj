@@ -11,6 +11,8 @@
 		CB8FAFCD1CA27FBC00C32F5C /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFCC1CA27FBC00C32F5C /* ADViewController.swift */; };
 		CB8FAFCF1CA27FDE00C32F5C /* MainAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFCE1CA27FDE00C32F5C /* MainAD.swift */; };
 		CB8FAFD11CA287EB00C32F5C /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFD01CA287EB00C32F5C /* SwiftDictModel.swift */; };
+		CB8FAFD31CA29A6F00C32F5C /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFD21CA29A6F00C32F5C /* AnimationTabBarController.swift */; };
+		CB8FAFD51CA29ADA00C32F5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FAFD41CA29ADA00C32F5C /* MainViewController.swift */; };
 		CB9FC3C91CA1688800228F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9FC3C81CA1688800228F90 /* AppDelegate.swift */; };
 		CB9FC3CB1CA1688800228F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9FC3CA1CA1688800228F90 /* ViewController.swift */; };
 		CB9FC3CE1CA1688800228F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9FC3CC1CA1688800228F90 /* Main.storyboard */; };
@@ -125,6 +127,8 @@
 		CB8FAFCC1CA27FBC00C32F5C /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		CB8FAFCE1CA27FDE00C32F5C /* MainAD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAD.swift; sourceTree = "<group>"; };
 		CB8FAFD01CA287EB00C32F5C /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
+		CB8FAFD21CA29A6F00C32F5C /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
+		CB8FAFD41CA29ADA00C32F5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CB9FC3C51CA1688800228F90 /* XQShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XQShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9FC3C81CA1688800228F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB9FC3CA1CA1688800228F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -742,6 +746,8 @@
 		CB9FC41F1CA1734800228F90 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CB8FAFD41CA29ADA00C32F5C /* MainViewController.swift */,
+				CB8FAFD21CA29A6F00C32F5C /* AnimationTabBarController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -1236,10 +1242,12 @@
 				CB9FC4571CA1737F00228F90 /* MJRefreshBackStateFooter.m in Sources */,
 				CB9FC45E1CA1737F00228F90 /* UIScrollView+MJRefresh.m in Sources */,
 				CB9FC45D1CA1737F00228F90 /* UIScrollView+MJExtension.m in Sources */,
+				CB8FAFD51CA29ADA00C32F5C /* MainViewController.swift in Sources */,
 				CB9FC50D1CA1772400228F90 /* UIView+Extension.swift in Sources */,
 				CB9FC45F1CA1737F00228F90 /* UIView+MJExtension.m in Sources */,
 				CB9FC44D1CA1737F00228F90 /* MJRefreshAutoFooter.m in Sources */,
 				CB9FC5131CA1802900228F90 /* BaseViewController.swift in Sources */,
+				CB8FAFD31CA29A6F00C32F5C /* AnimationTabBarController.swift in Sources */,
 				CB9FC4551CA1737F00228F90 /* MJRefreshBackGifFooter.m in Sources */,
 				CB9FC50F1CA1779700228F90 /* Theme.swift in Sources */,
 				CB9FC4881CA1738A00228F90 /* SDWebImageDownloaderOperation.m in Sources */,
